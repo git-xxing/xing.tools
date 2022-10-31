@@ -1,0 +1,28 @@
+.footer {
+    display: none;
+}
+.postlist-wrapper {
+    display: none;
+}
+.home-blog {
+    padding: 0;
+    margin: 0px auto;
+}
+.hero-img-prev {
+    display: none;
+}
+.hero-img-next {
+    display: none;
+}
+.navbar {
+    background-color: rgb(255 255 255 / 90%);
+    --navbar-line-height: calc( var(--navbar-height) - 2 * var(--navbar-padding-v) );
+    padding: var(--navbar-padding-v) var(--navbar-padding-h);
+    line-height: var(--navbar-line-height);
+}
+.navbar.invert span.site-name, .navbar.invert .navbar-items .navbar-item > a, .navbar.invert .navbar-items .navbar-item span.title {
+    color: #282c34;
+}
+.navbar.invert span.site-name, .navbar.invert .navbar-items .navbar-item > a:hover, .navbar.invert .navbar-items .navbar-item span.title {
+    color: #282c34;
+}

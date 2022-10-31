@@ -1,0 +1,19 @@
+{
+  "name": "xing.tools",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@renovamen/vuepress-plugin-rss": "^2.0.0-alpha.26",
+    "@vuepress/plugin-back-to-top": "^2.0.0-beta.53",
+    "vuepress": "2.0.0-beta.49",
+    "vuepress-theme-gungnir": "^2.0.0-alpha.26"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs --clean-cache",
+    "docs:build": "vuepress build docs --clean-cache"
+  },
+  "devDependencies": {
+    "@vuepress/bundler-webpack": "^2.0.0-beta.53"
+  }
+}
