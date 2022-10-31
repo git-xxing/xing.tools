@@ -34,10 +34,10 @@ export default defineUserConfig({
             mermaid: true,
             chartjs: true,
             giscus: {
-                repo: "This-is-an-Apple/gitalk-comments",
-                repoId: "MDEwOlJlcG9zaXRvcnkyMTA1MjQyMTQ=",
+                repo: "gitxingtools/utterances",
+                repoId: "R_kgDOGwT_cw",
                 category: "Announcements",
-                categoryId: "DIC_kwDODIxYNs4CAO1u",
+                categoryId: "DIC_kwDOGwT_c84CSSxf",
                 lazyLoad: true
             },
             mdPlus: {

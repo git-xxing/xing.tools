@@ -20,16 +20,16 @@ SQL 语句在 MySQL 中的流程是: SQL语句→查询缓存→解析器→优�
 
 ![16667687944874](https://oss.xing.tools/2022/10/26/16667687944874.jpg)
 ## SQL语法顺序
-FROM <left_table>
-ON <join_condition>
-<join_type> JOIN <right_table>
-WHERE <where_condition>
-GROUP BY <group_by_list>
-HAVING <having_condition>
+FROM
+ON
+JOIN
+WHERE
+GROUP BY
+HAVING
 SELECT
-DISTINCT <select_list>
-ORDER BY <order_by_condition>
-LIMIT <limit_number>
+DISTINCT
+ORDER BY
+LIMIT
 
 ## 缓冲池（buffer pool）
 `InnoDB`存储引擎是以`页`为单位来管理存储空间的，我们进行CRUD本质上都是在读/写页面。而磁盘的i/o效率比较慢，在内存中操作效率会快很多，为了能让数据表或者索引中的数据能随时为我所用，DBMS会申请占用内存来作为数据缓冲池，在真正访问页面之前，把磁盘是的页缓存到内存中的buffer pool.
