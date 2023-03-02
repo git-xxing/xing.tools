@@ -1,7 +1,7 @@
-import { defineUserConfig } from "vuepress";
-import { gungnirTheme } from "vuepress-theme-gungnir";
 import { navbar} from "./navbar";
 import { sidebar} from "./sidebar";
+import { defineUserConfig } from "vuepress";
+import { gungnirTheme } from "vuepress-theme-gungnir";
 
 export default defineUserConfig({
     theme: gungnirTheme({
@@ -45,10 +45,10 @@ export default defineUserConfig({
             },
             ga: "G-EE8M2S3MPB",
             ba: "10b7bc420625758a319d6b23aed4700f",
-            rss: {
-                siteURL: "https://v2.vuepress-theme-gungnir.vercel.app",
-                copyright: "Renovamen 2018-2022"
-            },
+            // rss: {
+            //     siteURL: "https://xing.tools",
+            //     copyright: "Xing 2022"
+            // },
             pwa: true,
             search: false // use @vuepress/plugin-docsearch instead
         },
