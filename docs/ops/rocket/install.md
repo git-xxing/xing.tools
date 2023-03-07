@@ -16,7 +16,7 @@ wget https://dist.apache.org/repos/dist/release/rocketmq/5.1.0/rocketmq-all-5.1.
 # 解压安装包 没有安装解压软件执行 sudo apt-get install unzip
 unzip rocketmq-all-5.1.0-bin-release.zip && mv rocketmq-all-5.1.0-bin-release /usr/local/rocketmq
 # 进入rocketmq目录
-cd /usr/local/rocketmq-5.1.0/
+cd /usr/local/rocketmq/
 ```
 ## 2.调整内存大小
 ```shell
@@ -26,7 +26,13 @@ JAVA_OPT="${JAVA_OPT} -server -Xms1g -Xmx1g"
 # vim bin/runserver.sh
 JAVA_OPT="${JAVA_OPT} -server -Xms1g -Xmx1g -Xmn512m -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=320m"
 ```
-## 2.启动NameServer
+## 3.修改broker配置
+```shell
+vim /conf/broker.conf
+# 添加 brokerIP1=ip
+```
+
+## 4.启动NameServer
 ```shell
 # 启动namesrv
 nohup sh bin/mqnamesrv &
@@ -42,7 +48,7 @@ tail -f ~/logs/rocketmqlogs/namesrv.log
 # 先启动broker
 nohup sh bin/mqbroker -n localhost:9876 --enable-proxy &
 # 验证broker是否启动成功, 比如, broker的ip是192.168.1.2 然后名字是broker-a
-tail -f ~/logs/rocketmqlogs/broker_default.log 
+tail -f nohup.out 
 ```
 ## 4.测试消息
 ```shell

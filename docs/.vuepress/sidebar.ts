@@ -240,7 +240,18 @@ export const sidebar: SidebarConfig = {
                 "/ops/es/install",
             ],
         },
-
+        {
+            text: 'Zookeeper',
+            children: [
+                "/ops/zookeeper/install",
+            ],
+        },
+        {
+            text: 'Redis',
+            children: [
+                "/ops/redis/install",
+            ],
+        },
     ],
 
 }
