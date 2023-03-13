@@ -15,7 +15,6 @@ export default defineUserConfig({
             sns: {
                 github: "gitxingtools",
                 email: "email@xing.tools",
-                rss: "/rss.xml",
             }
         },
         locales: {

@@ -10,6 +10,10 @@ export const navbar: NavbarConfig = [
         link: '/frame/',
     },
     {
+        text: '微服务',
+        link: '/ms/',
+    },
+    {
         text: '数据库',
         link: '/db/',
     },
@@ -25,5 +29,8 @@ export const navbar: NavbarConfig = [
         text: '运维',
         link: '/ops/',
     },
-
+    {
+        text: '工具',
+        link: '/tools/',
+    },
 ]

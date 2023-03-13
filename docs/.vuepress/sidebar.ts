@@ -4,81 +4,153 @@ export const sidebar: SidebarConfig = {
     "/java/":[
         {
             text: '基础',
+            collapsible: true,
             children: [
-                "/java/serialize",
-                "/java/io",
-                "/java/exception",
-                "/java/annotation",
-                "/java/features",
+                "/java/base/",
+                "/java/base/io",
+                "/java/base/exception",
+                "/java/base/annotation",
+                "/java/base/reflection",
+                "/java/base/serialize",
+                "/java/base/reference",
+
             ],
         },
         {
             text: '集合',
+            collapsible: true,
             children: [
-                "/java/collection",
-                "/java/list",
-                "/java/map",
-                "/java/set",
+                "/java/collections/",
+                "/java/collections/list",
+                "/java/collections/set",
+                "/java/collections/map",
             ],
         },
         {
-            text: '并发',
+            text: '多线程',
+            collapsible: true,
             children: [
-                "/java/thread",
+                "/java/thread/",
+                "/java/thread/keyword",
+                "/java/thread/pool",
+                "/java/thread/atomic",
+                "/java/thread/future",
+                "/java/thread/local",
+                "/java/thread/virtual",
             ],
         },
         {
             text: 'JVM',
+            collapsible: true,
             children: [
-                "/java/jvm",
+                "/java/jvm/",
+            ],
+        },
+        {
+            text: '新特性',
+            collapsible: true,
+            children: [
+                "/java/features/",
+                "/java/features/java8",
+                "/java/features/java11",
+                "/java/features/java17",
+            ],
+        },
+        {
+            text: '设计模式',
+            collapsible: true,
+            children: [
+                "/java/designPattern/create/",
+                "/java/designPattern/structural/",
+                "/java/designPattern/behavioral/",
             ],
         },
         {
             text: '数据结构与算法',
+            collapsible: true,
             children: [
-                "/java/structure",
+                "/java/structure/",
+                "/java/structure/bTree",
+                "/java/structure/b+Tree",
+                "/java/structure/redBlackTree",
+                "/java/structure/skipList",
             ],
         },
     ],
     "/frame/": [
         {
             text: 'Spring',
+            collapsible: true,
             children: [
-                "/frame/spring/transaction",
-                "/frame/spring/aop",
+                "/frame/spring/",
             ],
         },
         {
             text: 'SpringBoot',
+            collapsible: true,
             children: [
-                "/frame/spring/boot-annotation",
-                "/frame/spring/boot-autoconfigure",
+                "/frame/springBoot/",
+            ],
+        },
+        {
+            text: 'SpringSecurity',
+            collapsible: true,
+            children: [
+                "/frame/springBoot/",
             ],
         },
         {
             text: 'SpringCloud',
+            collapsible: true,
             children: [
-                "/frame/spring/spring-cloud",
+                "/frame/springCloud/",
             ],
         },
         {
             text: 'MyBatis',
+            collapsible: true,
             children: [
-                "/frame/mybatis/mybatis",
+                "/frame/mybatis/",
             ],
         },
         {
             text: 'MyBatisPlus',
+            collapsible: true,
             children: [
-                "/frame/mybatis/mybatis-plus",
+                "/frame/mybatisPlus/",
+            ],
+        },
+        {
+            text: 'Netty',
+            collapsible: true,
+            children: [
+                "/frame/netty/",
             ],
         },
 
     ],
+    "/ms/": [
+        {
+            text: '基础理论',
+            collapsible: true,
+            children: [
+                "/ms/",
+            ],
+        },
+        {
+            text: '相关组件',
+            collapsible: true,
+            children: [
+                "/frame/spring/",
+            ],
+        },
+    ],
     "/db/": [
         {
             text: 'MySQL',
+            collapsible: true,
             children: [
+                "/db/mysql/",
                 "/db/mysql/transaction",
                 "/db/mysql/indexes",
                 "/db/mysql/storage-engine",
@@ -87,12 +159,14 @@ export const sidebar: SidebarConfig = {
         },
         {
             text: 'Oracle',
+            collapsible: true,
             children: [
                 "/db/oracle/",
             ],
         },
         {
             text: 'Redis',
+            collapsible: true,
             children: [
                 "/db/redis/data-types",
                 "/db/redis/commands",
@@ -103,58 +177,60 @@ export const sidebar: SidebarConfig = {
         },
         {
             text: 'MongoDB',
+            collapsible: true,
             children: [
                 "/db/mongodb/",
-            ],
-        },
-        {
-            text: 'ElasticSearch',
-            children: [
-                "/db/es/",
             ],
         },
     ],
     "/middleware/": [
         {
-            text: 'Nacos',
-            children: [
-                "/middleware/nacos/",
-            ],
-        },
-        {
             text: 'RocketMQ',
+            collapsible: true,
             children: [
                 "/middleware/rocket/",
             ],
         },
         {
             text: 'Kafka',
+            collapsible: true,
             children: [
                 "/middleware/kafka/",
             ],
         },
         {
             text: 'ShardingSphere',
+            collapsible: true,
             children: [
                 "/middleware/sharding/",
+            ],
+        },
+        {
+            text: 'ElasticSearch',
+            collapsible: true,
+            children: [
+                "/middleware/es/",
             ],
         },
     ],
     "/web/": [
         {
             text: 'JavaScript',
+            collapsible: true,
             children: [
                 "/web/js/",
             ],
         },
         {
             text: 'TypeScript',
+            collapsible: true,
             children: [
                 "/web/ts/",
             ],
         },
         {
             text: 'Vue',
+            collapsible: true,
             children: [
                 "/web/vue/",
             ],
@@ -162,13 +238,15 @@ export const sidebar: SidebarConfig = {
     ],
     "/ops/": [
         {
-            text: 'Java',
+            text: 'JDK',
+            collapsible: true,
             children: [
-                "/ops/java/install",
+                "/ops/jdk/install",
             ],
         },
         {
             text: 'Git',
+            collapsible: true,
             children: [
                 "/ops/git/install",
                 "/ops/git/ssh-keys",
@@ -176,82 +254,103 @@ export const sidebar: SidebarConfig = {
         },
         {
             text: 'Nginx',
+            collapsible: true,
             children: [
                 "/ops/nginx/install",
             ],
         },
         {
             text: 'Docker',
+            collapsible: true,
             children: [
                 "/ops/docker/install",
             ],
         },
         {
             text: 'Harbor',
+            collapsible: true,
             children: [
                 "/ops/harbor/install",
             ],
         },
         {
             text: 'Nexus',
+            collapsible: true,
             children: [
                 "/ops/nexus/install",
             ],
         },
         {
             text: 'Jenkins',
+            collapsible: true,
             children: [
                 "/ops/jenkins/install",
             ],
         },
         {
             text: 'MySQL',
+            collapsible: true,
             children: [
                 "/ops/mysql/install",
             ],
         },
         {
             text: 'Nacos',
+            collapsible: true,
             children: [
                 "/ops/nacos/install",
             ],
         },
         {
             text: 'RocketMQ',
+            collapsible: true,
             children: [
                 "/ops/rocket/install",
             ],
         },
         {
             text: 'Kafka',
+            collapsible: true,
             children: [
                 "/ops/kafka/install",
             ],
         },
         {
             text: 'ShardingSphere',
+            collapsible: true,
             children: [
                 "/ops/sharding/install",
             ],
         },
         {
             text: 'ElasticSearch',
+            collapsible: true,
             children: [
                 "/ops/es/install",
             ],
         },
         {
             text: 'Zookeeper',
+            collapsible: true,
             children: [
                 "/ops/zookeeper/install",
             ],
         },
         {
             text: 'Redis',
+            collapsible: true,
             children: [
                 "/ops/redis/install",
             ],
         },
     ],
-
+    "/tools/": [
+        {
+            text: '工具',
+            children: [
+                "/tools/charles",
+                "/tools/v2ray",
+            ],
+        },
+    ],
 }

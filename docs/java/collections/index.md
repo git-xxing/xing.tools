@@ -1,4 +1,4 @@
-# Collection
+# 简介
 ## Collection
 ### List Map Set三者区别
 - List：有序可重复可为null

@@ -1,4 +1,4 @@
-# 基础理论
+# 简介
 ## 事物
 ### 事物特性
 ACID 原子性（Atomicity）、一致性（Consistency）、隔离性（Isolation）、持久性（Durability）     

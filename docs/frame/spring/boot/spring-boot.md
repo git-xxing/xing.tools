@@ -1,4 +1,4 @@
-# SpringBoot
+# 简介
 ## Spring Boot的核心注解是哪个?它主要由哪几个注解组成
 - @SpringBootApplication
 - @SpringBootConfiguration:组合了 @Configuration 注解，实现配置文件的功能。 
