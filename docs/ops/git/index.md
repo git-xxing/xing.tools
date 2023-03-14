@@ -1,9 +1,4 @@
-# 安装与部署
-## 安装客户端
-```shell
-yum -y install git-all
-```
-## 常用命令
+# 常用命令
 ```shell
 # 查看远程仓库
 git remote -v
