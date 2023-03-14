@@ -42,13 +42,25 @@ mv jdk1.8.0_361/ /usr/local/java/
 
 ### 3.添加环境变量
 ```shell
-# 设置 JAVA_HOME 环境变量为JDK安装路径
+# 为所有用户添加环境变量
+sudo vim /etc/profile
+```
+追加以下内容
+```shell
 export JAVA_HOME=/usr/jdk/jdk1.8.0_361
-# 将JDK的 bin 目录添加到 PATH 环境变量中
 export PATH=$JAVA_HOME/bin:$PATH
+```
+刷新配置
+```shell
+source /etc/profile
 ```
 
 ### 4.查看版本
 ```shell
 java -version
+```
+
+### 5.查看JAVA_HOME目录
+```shell
+echo $JAVA_HOME
 ```

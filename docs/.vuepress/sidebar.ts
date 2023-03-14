@@ -350,6 +350,7 @@ export const sidebar: SidebarConfig = {
             children: [
                 "/tools/charles",
                 "/tools/v2ray",
+                "/tools/ideaPlugins"
             ],
         },
     ],
