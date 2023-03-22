@@ -23,7 +23,7 @@ cd /usr/local/rocketmq/
 vim bin/runbroker.sh 
 # 调整参数
 JAVA_OPT="${JAVA_OPT} -server -Xms1g -Xmx1g"
-# vim bin/runserver.sh
+vim bin/runserver.sh
 JAVA_OPT="${JAVA_OPT} -server -Xms1g -Xmx1g -Xmn512m -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=320m"
 ```
 ## 3.修改broker配置

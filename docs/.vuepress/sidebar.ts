@@ -248,6 +248,7 @@ export const sidebar: SidebarConfig = {
             text: 'Git',
             collapsible: true,
             children: [
+                "/ops/git/",
                 "/ops/git/install",
                 "/ops/git/ssh-keys",
             ],

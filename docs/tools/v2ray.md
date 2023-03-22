@@ -105,14 +105,13 @@ vim /etc/nginx/conf.d/nginx.conf
 ```text {3,4,5,9}
 server {
     listen 443 ssl;
-    server_name v2ray.domain.host; # 域名
-    ssl_certificate       cert/v2ray.domain.host; # 证书
-    ssl_certificate_key   cert/v2ray.domain.host; # 密钥
+    server_name           v2ray.domain.host; # 域名
+    ssl_certificate       cert/v2ray.domain.host.pem; # 证书
+    ssl_certificate_key   cert/v2ray.domain.host.key; # 密钥
     ssl_protocols         TLSv1 TLSv1.1 TLSv1.2;
     ssl_ciphers           HIGH:!aNULL:!MD5;
     location / {
-        proxy_pass https://localhost:2333; 
-        proxy_http_version 1.1;
+        proxy_pass https://localhost:2333;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "upgrade";
     }
