@@ -342,6 +342,9 @@ export const sidebar: SidebarConfig = {
             collapsible: true,
             children: [
                 "/ops/redis/install",
+                "/ops/redis/install-mast-slave",
+                "/ops/redis/install-cluster",
+                "/ops/redis/install-sentinel"
             ],
         },
     ],
