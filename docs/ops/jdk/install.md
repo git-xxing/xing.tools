@@ -1,66 +1,57 @@
 ---
 date: 2022-10-25 22:48:45
 ---
-# 安装与部署
-## 快速安装
-<CodeGroup>
-<CodeGroupItem title="ubuntu" active>
-
-```shell
-apt install openjdk-8-jdk
-java -version
-```
-</CodeGroupItem>
-<CodeGroupItem title="yum">
-
-```shell
-yum list java*
-yum -y install java-1.8.0-openjdk*
-java -version
-```
-
-</CodeGroupItem>
-</CodeGroup>
-
-## 安装包
-
+# 源码安装  
 ::: tip
-虽然apt/yum等方式安装更为便捷，但是此等方式安装没有`JAVA_HOME`环境变量，在安装zookeeper等中间件时会出找不到java环境等。
+源码安装相对于`apt` `yum`等工具来说较为繁琐，但该方法配置了`JAVA_HOME`等环境变量，在部署一些Java应用时不会出现找不到环境变量的情况。
 :::
-### 1.下载安装包
-前往[Oracle JDK 8下载页面](https://www.oracle.com/java/technologies/downloads/#java8)下载适合你系统的JDK版本（Linux x64 tar.gz）
 
-### 2.解压安装包
+## 1.下载安装包
+前往 [Oracle](https://www.oracle.com/java/technologies/downloads/#java8)下载对应的JDK版本。
 ```shell
-# 新建jdk安装目录
-mkdir /usr/jdk
-# 解压文件
-tar -zxf jdk-8u361-linux-x64.tar.gz
-# 将解压的文件移至`/usr/jdk`目录下
-mv jdk1.8.0_361/ /usr/local/java/
+# Linux / MacOS 查看系统架构
+uname -a
+# Windows 查看系统架构
+systeminfo
 ```
 
-### 3.添加环境变量
+![16825831121406](https://oss.xing.tools/2023/04/27/16825831121406.jpg)
+
+## 2.上传安装包至服务器
+用`SCP`命令 或`FTP`工具将安装包上传至服务器。
+
+## 3.解压并安装JDK
 ```shell
+# 新建JDK安装目录
+sudo mkdir /usr/local/jdk
+# 解压安装包
+sudo tar -xvf jdk-8u371-linux-x64.tar.gz
+# 将安装包移至 /usr/local/jdk
+sudo mv jdk1.8.0_371/ /usr/local/jdk/
+
+```
+
+## 4.配置环境变量
+```shell{4}
 # 为所有用户添加环境变量
 sudo vim /etc/profile
-```
-追加以下内容
-```shell
-export JAVA_HOME=/usr/jdk/jdk1.8.0_361
+
+# 在文件末尾追加以下内容，注意文件目录
+export JAVA_HOME=/usr/local/jdk/jdk1.8.0_371
 export PATH=$JAVA_HOME/bin:$PATH
-```
-刷新配置
-```shell
+
+# 刷新配置
 source /etc/profile
+
 ```
 
-### 4.查看版本
+## 5.查看版本
 ```shell
+# 查控Java版本
 java -version
-```
 
-### 5.查看JAVA_HOME目录
-```shell
+# 查看JAVA_HOME目录
 echo $JAVA_HOME
+
 ```
+ 

@@ -241,6 +241,7 @@ export const sidebar: SidebarConfig = {
             text: 'JDK',
             collapsible: true,
             children: [
+                "/ops/jdk/simple-install",
                 "/ops/jdk/install",
             ],
         },
@@ -248,9 +249,9 @@ export const sidebar: SidebarConfig = {
             text: 'Git',
             collapsible: true,
             children: [
-                "/ops/git/",
                 "/ops/git/install",
-                "/ops/git/ssh-keys",
+                "/ops/git/gitlab",
+                "/ops/git/style",
             ],
         },
         {
@@ -258,6 +259,8 @@ export const sidebar: SidebarConfig = {
             collapsible: true,
             children: [
                 "/ops/nginx/install",
+                "/ops/nginx/modules",
+                "/ops/nginx/config",
             ],
         },
         {

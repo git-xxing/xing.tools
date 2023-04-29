@@ -1,18 +1,20 @@
 ---
 date: 2022-10-25 22:48:45
 ---
-# 安装与部署
-## 1.更新apt
-```shell
-sudo apt-get update
-sudo apt-get upgrade
-```
-## 2.安装git
-```shell
-sudo apt-get install git
-```
 
-## 3.查看版本
+# 安装部署
+::: tip
+git是一款代码管理工具。
+:::
+
 ```shell
+# 更新apt
+sudo apt update
+sudo apt upgrade
+
+# 安装git
+apt install git
+
+# 查看git版本
 git --version
 ```
