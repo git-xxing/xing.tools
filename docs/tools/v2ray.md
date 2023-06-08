@@ -141,6 +141,8 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyr
 ### 2.配置
    如果是第一次安装，你需要先注册一个帐号。其注册信息会在这里 `/var/lib/cloudflare-warp/reg.json`
 ```shell
+apt update
+apt install cloudflare-warp
 warp-cli register
 ```
 然后设置代理模式，这点非常重要，因为默认是 WARP 模式，这个会把你的整个 VPS 带到 Cloudflare 的 VPN 网络中，那么就会出现无法连接的情况。
