@@ -261,6 +261,7 @@ export const sidebar: SidebarConfig = {
                 "/ops/nginx/install",
                 "/ops/nginx/modules",
                 "/ops/nginx/config",
+                "/ops/nginx/certbot",
             ],
         },
         {
