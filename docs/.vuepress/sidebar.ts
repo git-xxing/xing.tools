@@ -303,6 +303,7 @@ export const sidebar: SidebarConfig = {
             collapsible: true,
             children: [
                 "/ops/nacos/install",
+                "/ops/nacos/docker",
             ],
         },
         {
